@@ -1,0 +1,23 @@
+[
+	{
+		"id": 1,
+		"titles": "French Toast",
+		"images": "",
+		"image_2": "",
+		"images": [
+			
+		],
+		"ratings": 4.2,
+		"previews": "",
+		"description": "",
+		"ingredients": [
+			{
+				"id": 1,
+				"name": "",
+				"amount": 0,
+				"nutritionVa": 3
+			}
+		],
+		
+	}
+]
