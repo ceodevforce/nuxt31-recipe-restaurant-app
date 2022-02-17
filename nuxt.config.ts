@@ -4,7 +4,8 @@ import { defineNuxtConfig } from 'nuxt3'
 export default defineNuxtConfig({
 	buildModules: [
 		'@inkline/nuxt',
-		'@nuxtjs/strapi'
+		'@nuxtjs/strapi',
+		'@pinia/nuxt'
 	],
 	inkline: {
         // Plugin options (optional)

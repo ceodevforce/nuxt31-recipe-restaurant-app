@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@inkline/inkline": "^3.0.8",
-    "@inkline/nuxt": "^3.0.5"
+    "@inkline/nuxt": "^3.0.5",
+    "@pinia/nuxt": "^0.1.8",
+    "pinia": "^2.0.11"
   }
 }

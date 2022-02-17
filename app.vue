@@ -1,13 +1,38 @@
 <script setup>
-  const user = useStrapiUser()
+  //TODO: Added Sanity/ Graphql to Nuxt App
+  //FIXME: Persist the logged user 
+  //FIXME: Inkline fixes/customizations. 
+  
+  import { useRecipe } from "./store/recipe"
 
-  console.log({user})
+  const store = useRecipe()
+  const loggedUser = useStrapiUser()
+  store.user = loggedUser
+
+  const recipes = ref([])
+  const route = useRoute()
+
+  const { find } = useStrapi4()
+
+  try {
+    const response = await find('recipes')
+    if (response) {
+      console.log(response)
+      recipes.value = response.data
+      store.recipes = response.data
+    }
+
+  } catch (e) {
+    console.log(e)
+  }
+
+
 </script>
 <template>
   <div>
     <NuxtLayout>
       <NuxtPage />
-  </NuxtLayout>
+    </NuxtLayout>
   </div>
 </template>
 <style lang="scss">
