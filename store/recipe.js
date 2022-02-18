@@ -7,6 +7,7 @@ export const useRecipe = defineStore('recipe', {
       user: {},
       recipes: [],
       recipe: {}, 
+      newRecipe: {}
     }
   }
 })

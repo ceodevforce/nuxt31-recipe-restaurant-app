@@ -7,6 +7,9 @@ export default defineNuxtConfig({
 		'@nuxtjs/strapi',
 		'@pinia/nuxt'
 	],
+	modules: [
+		'@formkit/nuxt',
+	],
 	inkline: {
         // Plugin options (optional)
     },

@@ -1,12 +1,12 @@
 <template>
 	<i-navbar>
-    <i-navbar-brand>
-        Navbar
+    <i-navbar-brand to="/">
+        Nuxt3 Recipe Restau
     </i-navbar-brand>
     <i-navbar-collapsible>
         <i-nav>
-            <i-nav-item>
-                Home
+            <i-nav-item to="/recipes">
+                Recipes
             </i-nav-item>
             <i-nav-item>
                 About
