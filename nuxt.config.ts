@@ -15,12 +15,11 @@ export default defineNuxtConfig({
     },
     strapi: {
     	url: process.env.STRAPI_URL || 'http://localhost:1337',
-    	key: 'authToken',
-  		expires: '7d',
+    	// key: 'authToken',
   		prefix: '/api',
   		version: 'v4',
   		cookie: {
-  			path: '/'
+  			maxAge: 3600 * 24 * 60
   		},
     }
 })

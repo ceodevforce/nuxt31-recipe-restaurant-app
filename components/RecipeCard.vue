@@ -17,8 +17,8 @@
 <template>
     <div>
         <i-card>
-            <template #image>
-                <img :src="imageMain" :alt="title"/>
+            <template #image >
+                <img id="fixed-card" :src="imageMain" :alt="title"/>
             </template>
         <h4 class="card-title">{{ title }}</h4>
         <p class="card-subtitle">{{ description }}</p>
@@ -27,3 +27,8 @@
     </i-card>
     </div>
 </template>
+<style>
+    #fixed-card {
+    height: 250px;
+}
+</style>

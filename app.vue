@@ -7,7 +7,8 @@
 
   const store = useRecipe()
   const loggedUser = useStrapiUser()
-  store.user = loggedUser
+
+  console.log(loggedUser)
 
   const recipes = ref([])
   const route = useRoute()
@@ -17,7 +18,6 @@
   try {
     const response = await find('recipes')
     if (response) {
-      console.log(response)
       recipes.value = response.data
       store.recipes = response.data
     }
@@ -26,6 +26,30 @@
     console.log(e)
   }
 
+  // const { fetchUser } = useStrapiAuth()
+
+  // const userStrap = await fetchUser()
+
+  // console.log(userStrap)
+
+  // const getRecipeCookie = () => {
+  //   const cookie = useCookie('recipe_cookies', {
+  //   maxAge: 30 * 60 * 24 * 1000,
+  // })
+  //     console.log(cookie)
+
+  // } 
+  // console.log(loggedUser)
+  
+  // if (loggedUser) {
+  //   cookie.userMain = loggedUser
+  // }
+
+
+
+// onMounted(() => {
+//   getRecipeCookie()
+// })
 
 </script>
 <template>
